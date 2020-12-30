@@ -1,0 +1,17 @@
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - development
+
+development:
+  image: ruby:latest
+  stage: development
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=articleblogapi --api-key=1e0893a6-305e-4d12-a06e-7a4ca75f3b40
+  only:
+    - master

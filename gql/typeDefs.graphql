@@ -1,0 +1,33 @@
+# import './inputs.graphql'
+# import './types.graphql'
+
+type Query {
+  ## Article
+  article(where: articleWhere): Article!
+  articles(where: Feature): ArticlePayload
+
+  ##categories
+  category(where: categoryWhere): Category!
+  categories(where: Feature): CategoryPayload
+
+  ##tags
+  tag(where: tagWhere): Tag!
+  tags(where: Feature): TagPayload
+}
+
+type Mutation {
+  ##category
+  createCategory(data: createCategoryInput): Category!
+  updateCategory(_id: ID!, data: updateCategoryInput): Category!
+  deleteCategory(_id: ID!): Category!
+
+  ##tag
+  createTag(data: createTagInput): Tag!
+  updateTag(_id: ID!, data: updateTagInput): Tag!
+  deleteTag(_id: ID!): Tag!
+
+  ##article
+  createArticle(data: createArticleInput): Article!
+  updateArticle(_id: ID!, data: updateArticleInput): Article!
+  deleteArticle(_id: ID!): Article!
+}

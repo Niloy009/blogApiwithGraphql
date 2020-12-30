@@ -1,0 +1,42 @@
+# import './inputs.graphql'
+
+type ArticlePayload {
+  resourceCount: Int
+  pageCount: Int
+  currentPage: Int
+  data: [Article!]
+}
+
+type Article {
+  _id: ID!
+  title: String!
+  slug: String!
+  excert: String!
+  body: String!
+  featureImage: String!
+  categories: [Category!]
+  tags: [Tag!]
+}
+
+type CategoryPayload {
+  resourceCount: Int
+  pageCount: Int
+  currentPage: Int
+  data: [Category!]
+}
+type Category {
+  _id: ID!
+  name: String
+  slug: String
+}
+type TagPayload {
+  resourceCount: Int
+  pageCount: Int
+  currentPage: Int
+  data: [Tag!]
+}
+type Tag {
+  _id: ID!
+  name: String
+  slug: String
+}

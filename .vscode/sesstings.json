@@ -1,0 +1,9 @@
+{
+	"path-intellisense.mappings": {
+		"@utils": "${workspaceRoot}/src/utils",
+		"@models": "${workspaceRoot}/src/models",
+		"@queries": "${workspaceRoot}/src/queries",
+		"@mutations": "${workspaceRoot}/src/mutations",
+		"@middlewares": "${workspaceRoot}/src/middlewares"
+	}
+}

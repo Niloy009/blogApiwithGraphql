@@ -1,0 +1,65 @@
+# import './types.graphql'
+
+input Feature {
+  limit: Int
+  sort: String
+  page: Int
+}
+
+## --------------------------------------------
+##       Category
+## --------------------------------------------
+input createCategoryInput {
+  name: String!
+  slug: String!
+}
+input updateCategoryInput {
+  name: String
+  slug: String
+}
+input categoryWhere {
+  _id: ID
+  slug: String
+}
+
+## --------------------------------------------
+##       Tag
+## --------------------------------------------
+input createTagInput {
+  name: String!
+  slug: String!
+}
+input updateTagInput {
+  name: String
+  slug: String
+}
+input tagWhere {
+  _id: ID
+  slug: String
+}
+
+## --------------------------------------------
+##       Article
+## --------------------------------------------
+input createArticleInput {
+  title: String!
+  slug: String!
+  excert: String!
+  body: String!
+  featureImage: String!
+  categories: [ID!]
+  tags: [ID!]
+}
+
+input updateArticleInput {
+  title: String
+  slug: String
+  excert: String
+  body: String
+  featureImage: String
+}
+
+input articleWhere {
+  _id: ID
+  slug: String
+}
